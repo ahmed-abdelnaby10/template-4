@@ -1,0 +1,92 @@
+/* start global values */
+:root {
+    --main-transition: 0.3s;
+    --gray-color: #888;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+}
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+/* end global values */
+/* ----------------------------------------------------------------------------------- */
+/* start friends */
+.friends {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.friend .fa-phone {
+    margin: 15px 10px 0;
+}
+.friend .fa-envelope {
+    margin: -30px 50px 0;
+}
+.friend .fa-envelope,
+.friend .fa-phone {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.friend .fa-phone:hover,
+.friend .fa-envelope:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.friend .person {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.friend .person img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: -25px 0 20px;
+}
+.friend .stats {
+    border-bottom: 1px solid #eee;
+}
+.friend .stats .vip {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffd700;
+    opacity: 0.2;
+}
+/* end friends */
+/* ----------------------------------------------------------------------------------- */

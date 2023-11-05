@@ -1,0 +1,118 @@
+/* start global values */
+:root {
+    --main-transition: 0.3s;
+    --gray-color: #888;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+}
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+/* end global values */
+/* ----------------------------------------------------------------------------------- */
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+.wrapper .box {
+    padding-bottom: 0;
+}
+.wrapper .box .title .date {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.wrapper .box .images {
+    margin: 50px 0 20px;
+}
+.wrapper .box .images img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: relative;
+    cursor: pointer;
+}
+.wrapper .box .images a:not(:first-child) img {
+    margin-left: -20px;
+}
+.wrapper .box .images a:hover img {
+    z-index: 1;
+}
+.wrapper .box .subject {
+    text-align: right;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.wrapper .box .subject span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.wrapper .box .cost {
+    padding: 20px 0;
+}
+.wrapper .box .cost .progress {
+    width: 250px;
+    height: 8px;
+}
+.wrapper .box .cost span {
+    font-weight: 600;
+}
+@media (max-width: 767px) {
+    .page .content .board .wrapper {
+        gap: 20px;
+    }
+    .wrapper .box .images {
+        justify-content: center;
+    }
+    .wrapper .box .subject {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .wrapper .box .subject span {
+        width: fit-content;
+    }
+    .wrapper .box .cost {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* ----------------------------------------------------------------------------------- */

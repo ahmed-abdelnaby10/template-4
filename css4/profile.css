@@ -1,0 +1,206 @@
+/* start global values */
+:root {
+    --main-transition: 0.3s;
+    --gray-color: #888;
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+}
+* {
+    box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    appearance: none;
+    display: none;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
+/* end global values */
+/* ----------------------------------------------------------------------------------- */
+/* start information */
+.general-information {
+    padding-right: 0;
+}
+@media (max-width: 767px) {
+    .general-information {
+        flex-direction: column;
+    }
+}
+.general-information .identify {
+    padding: 0 50px;
+}
+@media (max-width: 767px) {
+    .general-information .identify {
+        padding: 20px 50px;
+    }
+}
+.general-information .identify::before {
+    content: "";
+    position: absolute;
+    height: 320px;
+    width: 1px;
+    background-color: #eee;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+    .general-information .identify::before {
+        height: 500px;
+    }
+}
+.general-information .identify img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.general-information .identify h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.general-information .identify span:nth-of-type(1)::before {
+    content: "";
+    position: absolute;
+    width: 130px;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+.general-information .identify span:nth-of-type(1)::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    border-radius: 15px;
+    background-color: var(--blue-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(calc(-50% - 25px));
+}
+.general-information .identify span:nth-of-type(2) {
+    margin: 20px 0 10px;
+    font-size: 22px;
+    color: #ffd700;
+}
+.general-information .box {
+    padding: 20px 0 20px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+@media (max-width: 767px) {
+    .general-information .box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+.general-information .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.general-information .box label .toggle {
+    width: 85px;
+    height: 20px;
+}
+.general-information .box label .toggle::before {
+    font-size: 16px;
+    left: 2px;
+}
+.general-information .box label input:checked + .toggle::before {
+    left: 67px;
+}
+@media (max-width: 767px) {
+    .general-information .box .switch {
+        align-self: center;
+    }
+}
+/* end information */
+/* ----------------------------------------------------------------------------------- */
+/* start skills */
+@media (max-width: 991px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
+@media (max-width: 767px) {
+    .page .content .board .wrapper {
+        gap: 20px;
+    }
+}
+.wrapper .skills li {
+    padding: 15px 0;
+}
+.wrapper .skills li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.wrapper .skills li span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+@media (max-width: 991px) {
+    .wrapper .skills li {
+        text-align: center;
+    }
+}
+/* end skills */
+/* ----------------------------------------------------------------------------------- */
+/* start activities */
+.wrapper .activities .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+.wrapper .activities .box {
+    padding: 20px 0;
+}
+.wrapper .activities .box .activity img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+.wrapper .activities .box .time {
+    text-align: right;
+}
+@media (max-width: 767px) {
+    .wrapper .activities .box {
+        flex-direction: column;
+    }
+    .wrapper .activities .box .activity {
+        flex-direction: column;
+        text-align: center;
+    }
+    .wrapper .activities .box .time {
+        text-align: center;
+    }
+}
+/* end activities */
+/* ----------------------------------------------------------------------------------- */
